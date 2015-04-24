@@ -34,6 +34,11 @@ angular
         templateUrl: 'assets/templates/look.html'
       })
 
+      .when('/look2', {
+        controller: 'LookPController',
+        templateUrl: 'assets/templates/look2.html'
+      })
+
       .otherwise({
         redirectTo : '/'
       });
@@ -44,6 +49,10 @@ angular
     function($scope, $mdSidenav, $location){
       $scope.goInicio = function(){
         $location.path('/app');
+      }
+
+      $scope.look2 = function(){
+        $location.path('/look2');
       }
     }
   ])
@@ -100,8 +109,60 @@ angular
     }
   ])
 
+  .controller('LookPController', ['$scope', '$mdSidenav', '$location', '$rootScope',
+    function($scope, $mdSidenav, $location, $rootScope){
+      $scope.look = '1';
+      $scope.loadingLook = true;
+      $scope.selecteds = ['4', '8', '9'];
+      $scope.selected = 0;
+      var i = 1;
+
+      function procuraLook(i){
+        var len = 10;
+        setTimeout(function(){
+          $rootScope.$apply(function() {
+            $scope.look = i;
+            i++;
+            if(i <= len) procuraLook(i);
+            else {
+              $scope.loadingLook = false;
+              $scope.look = '4';
+            }
+            console.log($scope.loadingLook);
+          });
+        }, 250);
+      }
+      procuraLook(i);
+
+      $scope.next = function(){
+        $scope.selected++;
+        if($scope.selected >= $scope.selecteds.length)
+          $scope.selected = 0;
+          $scope.look = $scope.selecteds[$scope.selected];
+      }
+
+      $scope.previous = function(){
+        $scope.selected--;
+        if($scope.selected < 0)
+          $scope.selected = $scope.selecteds.length - 1;
+          $scope.look = $scope.selecteds[$scope.selected]; 
+      }
+    }
+  ])
+
   .controller('IndexController', ['$scope', '$location', function($scope, $location){
+    $scope.mostraHumor = false;    
+    $scope.humor = "-";
     
+    $scope.abre = function(){
+      $scope.mostraHumor = true;
+      $scope.humor = "Confiante";
+    }
+  
+    $scope.fecha = function(){
+      $scope.mostraHumor = false;
+    }
+
     $scope.look = function(){
       $location.path('/look');
     }

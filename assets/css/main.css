@@ -47,7 +47,7 @@ https://github.com/google/material-design-icons
   width: 250px;
   height: 250px;
   margin: 10% auto;
-  border: 2px solid #3F51B5;
+  border: 2px solid #B55D2D;
   position: relative;
   background-image: url('../img/profile.png');
   background-size: contain;
@@ -163,3 +163,18 @@ h3{
   color: #e3e3e3;
 }
 
+.background-fill{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 30;
+}
+
+.md-toolbar-tools h2, .md-toolbar-tools h3{
+  cursor: pointer !important;
+}
+
+md-card.md-default-theme{
+  cursor: pointer !important;
+}

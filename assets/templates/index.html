@@ -1,4 +1,54 @@
 <div layout="row" flex class="content">
+  
+  <div class="background-fill" ng-show="mostraHumor">
+    <div layout="column" flex id="content">
+      <md-content layout="column" flex class="md-padding" style="background-color: inherit;">
+        <md-card style="background-color: #FFF">
+          <md-card-content>
+            <div layout="row">
+              <div>
+                <img src="assets/img/smile.png" alt="" class="icon">
+              </div>
+              <div>
+                <h2 class="md-title">Humor</h2>
+                <md-checkbox ng-model="checkbox1" aria-label="Checkbox 1" ng-click="fecha()">
+                  Animado
+                </md-checkbox>
+                <md-checkbox ng-model="checkbox2" aria-label="Checkbox 1" ng-click="fecha()">
+                  Muito feliz
+                </md-checkbox>
+                <md-checkbox ng-model="checkbox3" aria-label="Checkbox 1" ng-click="fecha()">
+                  Confiante
+                </md-checkbox>
+                <md-checkbox ng-model="checkbox4" aria-label="Checkbox 1" ng-click="fecha()">
+                  Em Paz
+                </md-checkbox>
+                <md-checkbox ng-model="checkbox5" aria-label="Checkbox 1" ng-click="fecha()">
+                  Apreensivo
+                </md-checkbox>
+                <md-checkbox ng-model="checkbox6" aria-label="Checkbox 1" ng-click="fecha()">
+                  Revoltado
+                </md-checkbox>
+                <md-checkbox ng-model="checkbox7" aria-label="Checkbox 1" ng-click="fecha()">
+                  Triste
+                </md-checkbox>
+                <md-checkbox ng-model="checkbox8" aria-label="Checkbox 1" ng-click="fecha()">
+                  #morta
+                </md-checkbox>
+                <md-checkbox ng-model="checkbox9" aria-label="Checkbox 1" ng-click="fecha()">
+                  Cansado
+                </md-checkbox>
+                <md-checkbox ng-model="checkbox10" aria-label="Checkbox 1" ng-click="fecha()">
+                  TPM
+                </md-checkbox>
+              </div>
+            </div>
+            </md-card-content>
+        </md-card>
+      </md-content>
+    </div>
+  </div>
+
 
   <md-button class="md-fab pull-right choselook" ng-click="look()">
     <md-icon md-svg-src="assets/img/tshirt-crew.svg"></md-icon>
@@ -10,7 +60,7 @@
 
     <div layout="row">
       <div flex flex-order="1">
-        <md-card>
+        <md-card ng-click="abre()">
           <md-card-content>
             <div layout="row">
               <div>
@@ -19,7 +69,7 @@
               <div>
                 <h2 class="md-title">Humor</h2>
                 <h3>
-                Animado
+                {{ humor }}
                 </h3>
               </div>
             </div>
@@ -130,3 +180,4 @@
     </md-content>
   </div>
 </div>
+
