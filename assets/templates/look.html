@@ -1,0 +1,62 @@
+<md-content layout="column" flex="" class="md-padding md-default-theme">
+  <div layout="row" class="content">
+    <div layout="column" flex="33">
+      <md-card flex>
+        <md-card-content>
+          <div layout="row">
+            <div>
+              <img src="assets/img/smile.png" alt="" class="icon">
+            </div>
+            <div>
+              <h2 class="md-title">Humor</h2>
+              <h3>
+                Animado
+              </h3> 
+            </div>
+          </div>
+        </md-card-content>
+      </md-card>
+      <md-card flex>
+        <md-card-content>
+          <div layout="row">
+            <div>
+              <img src="assets/img/cloud.png" alt="" class="icon">
+            </div>
+            <div>
+              <h2 class="md-title">Clima</h2>
+              <h3>
+                27ºC - Chuvoso
+              </h3> 
+            </div>
+          </div>
+        </md-card-content>
+      </md-card>
+      <md-card flex>
+        <md-card-content>
+          <div layout="row">
+            <div>
+              <img src="assets/img/bike.png" alt="" class="icon">
+            </div>
+            <div>
+              <h2 class="md-title">Atividade</h2>
+              <h3>
+                Ir trabalhar
+              </h3> 
+            </div>
+          </div>
+        </md-card-content>
+      </md-card>
+    </div>
+    <div layout="column" flex="66">
+      <div class="area-camera">
+        <div class="loading-roupas" ng-show="loadingLook">
+          <md-progress-circular md-mode="indeterminate" style="margin:0 auto; margin-top: 50%"></md-progress-circular>
+          <h2>Procurando looks</h2>
+        </div>
+        <img src="assets/img/arrow-left.png" class="arrow" ng-click="previous()" ng-hide="loadingLook">
+        <img src="assets/img/looks/{{ look }}.jpg">
+        <img src="assets/img/arrow-right.png" class="arrow right" ng-click="next()" ng-hide="loadingLook">
+      </div>
+    </div>
+  </div>
+</md-content>

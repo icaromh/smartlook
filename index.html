@@ -9,16 +9,25 @@
     
     <link rel="icon" type="image/png" href="assets/img/icon.png">
     
-    <base href="/smartlook/" />
+    <!-- <base href="/smartlook/" /> -->
     
     <title>SmartLook</title>
   </head>
   <body layout="column" ng-controller="AppCtrl">
     <md-toolbar layout="row">
-      <h1 class="md-toolbar-tools" layout-align-gt-sm="left">SmartLook</h1>
+      <div class="md-toolbar-tools">
+        <h2 ng-click="goInicio()">SmartLook</h2>
+        <span flex></span>
+        <md-button class="md-icon-button">
+          <img src="assets/img/dots.png" alt="" class="icon-toolbar">
+        </md-button>
+      </div>
+
     </md-toolbar>
     
     <div ng-view></div>
+
+    
 
     <!-- Angular Material Dependencies -->
     <script src="assets/js/angular.js"></script>

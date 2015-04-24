@@ -1,3 +1,23 @@
+.hidden{
+  display: none !important;
+}
+
+md-toolbar.md-default-theme{
+  background-color: #267365 !important;
+}
+
+md-progress-circular.md-default-theme .md-inner .md-right .md-half-circle,
+md-progress-circular.md-default-theme .md-inner .md-left .md-half-circle, md-progress-circular.md-default-theme .md-inner .md-right .md-half-circle,
+md-progress-circular.md-default-theme .md-inner .md-left .md-half-circle{
+  border-right-color: #267365 !important; 
+  border-top-color: #267365 !important; 
+  border-left-color: #267365 !important; 
+}
+
+.md-button.md-default-theme.md-fab{
+  background-color: #F2913D !important;
+}
+
 .menuBtn {
   background-color: transparent;
   border: none;
@@ -73,3 +93,73 @@ https://github.com/google/material-design-icons
     50% { top: 100%; }
     100% { top: 0px; }
 }
+
+h3, h2{
+  padding: 0px;
+  margin: 0px;
+}
+
+h3{
+  font-weight: 400;
+}
+
+.icon{
+  float: left;
+  width: 60px; 
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.icon-toolbar{
+  height: 30px;
+  color: #FFF;
+}
+
+.content{
+  position: relative;
+}
+
+.choselook{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.area-camera{
+  position: relative;
+  margin-top: 20px;
+  margin: 0 auto;
+  height: 450px; 
+  text-align: center;
+}
+
+.area-camera img{
+  height: 100%;
+  margin: 0 auto;
+}
+
+.area-camera img.arrow{
+  height: auto;
+  margin: 0 auto;
+  position: absolute;
+  top: 45%;
+  left: -50px;
+  width: 45px;
+  cursor: pointer;
+}
+
+.area-camera img.arrow.right{
+  left: auto;
+  right: -45px;
+}
+
+
+.loading-roupas{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,0.4);
+  text-align: center;
+  color: #e3e3e3;
+}
+
