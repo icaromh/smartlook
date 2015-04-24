@@ -5,23 +5,33 @@ angular
     ]
   )
 
+  .config([
+    '$locationProvider'
+    , function($locationProvider){
+      $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: true
+      });
+    }
+  ])
+
   .config(function($routeProvider){
 
     $routeProvider
       
-      .when('/', {
+      .when('/app', {
         controller: 'IndexController',
         templateUrl: 'assets/templates/index.html'
       })
 
-      .when('/login', {
+      .when('/', {
         controller: 'LoginController',
         templateUrl: 'assets/templates/login.html'
       })
 
 
       .otherwise({
-        redirectTo : '/login'
+        redirectTo : '/'
       });
 
   })
@@ -32,10 +42,18 @@ angular
     }
   ])
 
+  .controller('LoginController', ['$scope', '$mdSidenav', '$location', '$rootScope', 
+    function($scope, $mdSidenav, $location, $rootScope){
+
+      setTimeout(function(){
+        console.log('oi');
+        $rootScope.$apply(function() {
+         $location.path('app');
+        });
+      }, 6000);
+    }
+  ])
+
   .controller('IndexController', ['$scope', function($scope){
 
-  }])
-
-  .controller('LoginController', ['$scope', '$mdSidenav', function($scope, $mdSidenav){
-     
   }])

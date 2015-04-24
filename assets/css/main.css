@@ -21,3 +21,55 @@ https://github.com/google/material-design-icons
 .menuBtn {
   background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGcgaWQ9IkhlYWRlciI+CiAgICA8Zz4KICAgICAgICA8cmVjdCB4PSItNjE4IiB5PSItMjIzMiIgZmlsbD0ibm9uZSIgd2lkdGg9IjE0MDAiIGhlaWdodD0iMzYwMCIvPgogICAgPC9nPgo8L2c+CjxnIGlkPSJMYWJlbCI+CjwvZz4KPGcgaWQ9Ikljb24iPgogICAgPGc+CiAgICAgICAgPHJlY3QgZmlsbD0ibm9uZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+CiAgICAgICAgPHBhdGggZD0iTTMsMThoMTh2LTJIM1YxOHogTTMsMTNoMTh2LTJIM1YxM3ogTTMsNnYyaDE4VjZIM3oiIHN0eWxlPSJmaWxsOiNmM2YzZjM7Ii8+CiAgICA8L2c+CjwvZz4KPGcgaWQ9IkdyaWQiIGRpc3BsYXk9Im5vbmUiPgogICAgPGcgZGlzcGxheT0iaW5saW5lIj4KICAgIDwvZz4KPC9nPgo8L3N2Zz4=) no-repeat  center center;
 }
+
+
+.login-area{
+  width: 250px;
+  height: 250px;
+  margin: 10% auto;
+  border: 2px solid #3F51B5;
+  position: relative;
+  background-image: url('../img/profile.png');
+  background-size: contain;
+}
+
+.login-area:before{
+  content: 'Escanenado perfil';
+  text-align: center;
+  display: block;
+  position: absolute;
+  bottom: -30px;
+  height: 20px;
+  left: 0px;
+  width: 246px;
+}
+
+
+.login-area:after{
+  content: '';
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 246px;
+  background: #f00;
+  left: 0;
+  top: 0;
+  -webkit-animation-name: scanning;
+          animation-name: scanning;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes scanning {
+    0% { top: 0px;}
+    50% { top: 100%; }
+    100% { top: 0px; }
+}
+
+@keyframes scanning {
+    0% { top: 0px;}
+    50% { top: 100%; }
+    100% { top: 0px; }
+}
